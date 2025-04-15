@@ -1,0 +1,145 @@
+<!-- To learn HTML
+    BUILDING A page
+
+USE: Responsive Web Design:
+Responsive web design is about creating web pages that look good on all devices!
+Make sure images can scale down, but can never be larger than their max width.
+Show different Images depending on browser width
+User responsive text sizes
+
+Look into Responsive Web Design Frameworks.
+-->
+
+<!--Tags, Nesting, Forms, Inputs-->
+
+<html lang = "en-US">
+<head>
+  <link rel = "stylesheet" href = "TannerLang.css">
+  <link rel = "inputStore" href = "user_input.txt">
+  <title> Tanner Lang </title>
+  <meta name="author" content="Tanner Lang">
+  <meta name="description" content="Personal Site: Next.js Pipeline Work">
+  <!--Refresh document every 30 seconds-->
+  <meta http-equiv="refresh" content="30">  
+  <!--Multi-Device Display for Responsive Web design-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <!-- "Hello JavaScript!" into an HTML element with id="demo":-->
+  <script>
+    function myFunction() 
+    {
+      document.getElementById("demo").innerHTML = "Hello JavaScript!";   
+    }
+  </script>
+
+
+  <!--JS script to prevent the page from refreshing when clicking submit on a form.-->
+  <script>
+    function handleSubmit()
+    {
+      event.preventDefault(); //prevents the page reload on submit
+      onclick=document.getElementById("submitResult").innerHTML = "Submission Recorded.";
+      return false;
+    }
+  </script>
+</head>
+
+
+
+
+<div>
+  <h1>Tanner Lang</h1>
+  <p title = "inputPrompt">Socials</p>
+  <p>
+    <a href="https://www.instagram.com/tannerjlang/?hl=en" target="_blank">Instagram</a>
+  </p>
+</div>
+
+<!--For navigation links-->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+
+
+<body>
+  
+  <div class = "aboutMe">
+    <div style="background-color:rgba(0, 189, 72, 0.308);color:rgb(128, 128, 128);padding:20px;">
+      <h2 style = "text-align: center">About Me</h2>
+      <p style = "color:rgb(128, 128, 128);padding:20px;">
+        My personal webpage. Also a practice space for HTML, CSS, and JavaScript that I am using to learn, in order to advance to React, and then to Next.JS
+      </p>
+    </div>
+  </div>
+
+
+  <div class = "myInfo">
+    <article>
+      <h2 style="text-align:center">My Projects</h2>
+      <p>Vast Swarm...etc...</p>
+    </article>
+      
+    <article>
+      <h2 style="text-align:center">Education</h2>
+      <p>Florida Gulf Coast University...etc...</p>
+    </article>
+      
+    <article>
+      <h2 style="text-align:center">Interests</h2>
+      <p>Physics Engines...etc...</p>
+    </article>  
+  </div>
+  
+  <!--Playing around with forms-->
+  <!--I need to figure out storing info from a form somewhere else, or putting the data from a form to use. AND how do I properly link a file to the html to do that?
+      - The Action attribute defines the action to be performed when the form is submitted, which points me in the right direction for aboce.-->
+      <!--action="/user_input.txt"-->
+
+  <div class = "formInputs">
+    <form>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname"><br>
+  
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname"><br>
+      <input type="submit" value="Submit">
+    </form>
+  
+    <!--Radio Button Test-->
+    <p style="text-align:left">Choose your favorite color:</p>
+    <form>
+      <input type="radio" id="green" name="fav_color" value="Green">
+      <label for="green">Green</label><br>
+      <input type="radio" id="orange" name="fav_color" value="Orange">
+      <label for="orange">Orange</label><br>
+      <input type="radio" id="blue" name="fav_color" value="Blue">
+      <label for="blue">Blue</label><br>
+      <input type="submit" value="Submit">
+    </form>
+  
+    <!--Radio Button Test-->
+    <p style="text-align:left">What IDE do you use? <br> Select all that apply:</p>
+    <form onsubmit="return handleSubmit(event)">
+      <input type="checkbox" id="ide1" name="ide1" value="VSCode">
+      <label for="ide1">VS Code</label><br>
+      <input type="checkbox" id="ide2" name="ide2" value="VS">
+      <label for="ide2">Visual Studio</label><br>
+      <input type="checkbox" id="ide3" name="ide3" value="IntelliJ">
+      <label for="ide3"> IntelliJ </label><br>
+      <input type="submit" value="Submit">
+      <p id="submitResult" style="text-align:left"></p>
+    </form>
+  </div>
+
+</body>
+
+
+<!--Footer-->
+<footer>
+</footer>
+</html>

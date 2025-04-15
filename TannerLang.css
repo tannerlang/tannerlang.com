@@ -1,0 +1,98 @@
+body 
+{
+  background-color:rgba(0, 189, 71, 0.2);
+}
+
+h1 
+{
+  color:gray;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:300%; 
+  text-align: center;
+  border: 8px outset powderblue;
+  padding: 25px;
+  margin: 50px;
+}
+
+p 
+{
+  text-align:center;
+  color:gray;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 150%;
+}
+
+a:link, a:visited 
+{
+  background-color: #00ceab;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active 
+{
+  background-color: #00ceac9d;
+}
+
+ul 
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+  
+li 
+{
+    float: left;
+}
+  
+li a 
+{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+  
+li a:hover 
+{
+  background-color: #00ceac9d;
+}
+
+.aboutMe
+{
+  display: flex;
+}
+
+.aboutMe > div
+{
+  width: 100%;
+}
+
+
+.myInfo
+{
+  
+}
+
+.myInfo > div
+{
+  
+}
+
+.formInputs
+{
+  
+}
+
+.formInputs > div
+{
+  
+}
+
