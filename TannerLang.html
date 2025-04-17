@@ -23,25 +23,9 @@ Look into Responsive Web Design Frameworks.
   <meta http-equiv="refresh" content="30">  
   <!--Multi-Device Display for Responsive Web design-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
   <!-- "Hello JavaScript!" into an HTML element with id="demo":-->
-  <script>
-    function myFunction() 
-    {
-      document.getElementById("demo").innerHTML = "Hello JavaScript!";   
-    }
-  </script>
+  <script src="scripts.js" defer></script>
 
-
-  <!--JS script to prevent the page from refreshing when clicking submit on a form.-->
-  <script>
-    function handleSubmit()
-    {
-      event.preventDefault(); //prevents the page reload on submit
-      onclick=document.getElementById("submitResult").innerHTML = "Submission Recorded.";
-      return false;
-    }
-  </script>
 </head>
 
 
@@ -99,30 +83,22 @@ Look into Responsive Web Design Frameworks.
       <!--action="/user_input.txt"-->
 
   <div class = "formInputs">
-    <form>
+    <form onsubmit="return handleSubmit(event)">
       <label for="fname">First name:</label><br>
       <input type="text" id="fname" name="fname"><br>
   
       <label for="lname">Last name:</label><br>
       <input type="text" id="lname" name="lname"><br>
-      <input type="submit" value="Submit">
-    </form>
-  
-    <!--Radio Button Test-->
-    <p style="text-align:left">Choose your favorite color:</p>
-    <form>
+
+      <p style="text-align:left">Choose your favorite color:</p>
       <input type="radio" id="green" name="fav_color" value="Green">
       <label for="green">Green</label><br>
       <input type="radio" id="orange" name="fav_color" value="Orange">
       <label for="orange">Orange</label><br>
       <input type="radio" id="blue" name="fav_color" value="Blue">
       <label for="blue">Blue</label><br>
-      <input type="submit" value="Submit">
-    </form>
-  
-    <!--Radio Button Test-->
-    <p style="text-align:left">What IDE do you use? <br> Select all that apply:</p>
-    <form onsubmit="return handleSubmit(event)">
+
+      <p style="text-align:left">What IDE do you use? <br> Select all that apply:</p>
       <input type="checkbox" id="ide1" name="ide1" value="VSCode">
       <label for="ide1">VS Code</label><br>
       <input type="checkbox" id="ide2" name="ide2" value="VS">
@@ -130,8 +106,8 @@ Look into Responsive Web Design Frameworks.
       <input type="checkbox" id="ide3" name="ide3" value="IntelliJ">
       <label for="ide3"> IntelliJ </label><br>
       <input type="submit" value="Submit">
-      <p id="submitResult" style="text-align:left"></p>
     </form>
+    <p id="submitResult" style="text-align:left; display:none;" >Submission Recorded.</p>
   </div>
 
 </body>
